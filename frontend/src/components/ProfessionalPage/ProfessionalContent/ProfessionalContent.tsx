@@ -1,10 +1,12 @@
 import { styled } from 'styled-components';
 import Biopic from './Biopic';
+import PortFolio from './PortFolio/PortFolio';
 
 export default function ProfessionalContent() {
   return (
     <Wrapper>
       <Biopic />
+      <PortFolio />
     </Wrapper>
   );
 }
