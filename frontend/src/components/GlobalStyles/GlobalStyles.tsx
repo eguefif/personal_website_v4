@@ -1,9 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  html {
-  --color-primary: hsl(220deg, 50%, 50%);
-}
+    html {
+      --color-white: hsl(250 0% 83.1%);
+      --color-primary: hsl(220 50% 50%);
+    }
+
+  body {
+    background-color: hsl(220deg, 10%, 10%);
+    color: var(--color-white);
+  }
+
   /* Thanks to Josh Comeau, the author of this CSS reset */
 
   /* 1. Use a more-intuitive box-sizing model */

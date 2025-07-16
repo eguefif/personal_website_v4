@@ -30,5 +30,5 @@ const SideMenuWrapper = styled.div`
 `;
 
 const ProfessionalContentWrapper = styled.div`
-  flex: 4;
+  flex: 1;
 `;
