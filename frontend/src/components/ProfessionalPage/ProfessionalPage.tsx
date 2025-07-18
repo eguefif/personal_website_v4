@@ -23,9 +23,12 @@ export default function ProfessionalPage() {
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: start;
 `;
 
 const SideMenuWrapper = styled.div`
+  position: sticky;
+  top: 0;
   flex: 1;
 `;
 

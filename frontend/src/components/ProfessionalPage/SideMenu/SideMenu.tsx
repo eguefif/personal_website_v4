@@ -19,8 +19,8 @@ const Nav = styled.nav`
 
   height: 64px;
   width: 450px;
-  margin: auto;
-  padding: 34px
+  margin: 0 auto;
+  padding: 0 34px;
 `;
 
 const NavLink = styled.a`
