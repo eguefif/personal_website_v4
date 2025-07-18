@@ -1,5 +1,5 @@
 import GlobalStyles from './components/GlobalStyles/GlobalStyles';
-import ProfessionalPage from './components/ProfessionalPage/ProfessionalPage/';
+import ProfessionalPage from './components/ProfessionalPage/ProfessionalPage';
 
 function App() {
   return (

@@ -12,10 +12,10 @@ export default function Header() {
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   gap: 34px;
 
-  height: 64px;
+  height: 128px;
   width: 450px;
   margin: auto;
   padding: 34px
