@@ -63,6 +63,8 @@ const TechList = styled.ul`
   display: flex;
   gap: 16px;
   align-items: center;
+  justify-content: space-between;
+  padding: 0;
 `;
 
 const TechEntry = styled.li`
