@@ -14,7 +14,7 @@ export default function ProfessionalContent() {
 }
 
 const Wrapper = styled.div`
-  max-width: 600px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 64px;

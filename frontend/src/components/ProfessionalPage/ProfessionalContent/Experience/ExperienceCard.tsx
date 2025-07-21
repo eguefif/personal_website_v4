@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 import type { Experience } from './data';
+import AchievementsContainer from './AchievementsContainer';
 
 export default function Experience({experience} : {experience: Experience}) {
 
@@ -12,13 +13,13 @@ export default function Experience({experience} : {experience: Experience}) {
     <Wrapper>
       <Years>
         <Year>{experience.start}</Year>
-        -
+        <span>-</span>
         <Year>{experience.end}</Year>
       </Years>
 
       <Main>
         <JobTitle>{experience.title} </JobTitle>
-        <JobDescription>{experience.description} </JobDescription>
+        <AchievementsContainer achievements={experience.achievements} />
         <TechList>
           {techEntries}
         </TechList>
@@ -27,25 +28,50 @@ export default function Experience({experience} : {experience: Experience}) {
   );
 }
 
+
 const Wrapper = styled.div`
   display: flex;
   gap: 24px;
 `;
 
 const Years = styled.div`
-  flex: 1;
+  flex-shrink: 999;
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
 `;
-
-const Year = styled.span``;
 
 const Main = styled.div`
-  flex: 2
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 `;
 
-const JobTitle = styled.h1``;
+const Year = styled.span`
+  font-weight: 700;
+`;
 
-const JobDescription = styled.div``;
 
-const TechList = styled.ul``;
+const JobTitle = styled.h1`
+  font-size: 1.4rem;
+`;
 
-const TechEntry = styled.li``;
+const TechList = styled.ul`
+  display: flex;
+  gap: 16px;
+  align-items: center;
+`;
+
+const TechEntry = styled.li`
+  padding: 8px;
+  list-style-type: none;
+  border-radius: 15px;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+`;

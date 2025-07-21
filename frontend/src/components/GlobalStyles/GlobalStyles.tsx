@@ -4,9 +4,9 @@ const GlobalStyles = createGlobalStyle`
     html {
       --color-white: hsl(250 0% 83.1%);
       --color-primary: hsl(220 50% 50%);
+      --color-secondary: hsl(120 50% 50%);
 
       --color-gray-400-transparent: hsla(250 0% 49.4% / 0.33);
-
     }
 
   body {
