@@ -5,26 +5,37 @@ import type { Project } from './FakeData';
 export default function ProjectCard({project} : { project: Project }) {
   return (
     <ProjectCardWrapper>
-      <ProjectTitle>
-        {project.title}
-      </ProjectTitle>
-      <ProjectDescription>
-        {project.description}
-      </ProjectDescription>
+      <ProjectImage src={project.image} />
+      <ProjectContent>
+        <ProjectTitle>
+          {project.title}
+        </ProjectTitle>
+        <ProjectDescription>
+          {project.description}
+        </ProjectDescription>
+      </ProjectContent>
     </ProjectCardWrapper>
   );
 }
 
 const ProjectCardWrapper = styled.div`
-  border: solid 1px var(--color-gray-400);
-  border-radius: 16px;
+  display: flex;
+  justify-content: start;
   background-color: var(--color-gray-400-transparent);
+  border-radius: 0 16px 16px 0;
+  gap: 16px;
+`;
+
+
+const ProjectImage = styled.img`
+  width: 100%;
+`;
+
+const ProjectContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  gap: 16px;
-  padding: 24px;
-  margin: 24px auto;
+  gap: 24px;
+  padding: 12px;
 `;
 
 const ProjectTitle = styled.div`
