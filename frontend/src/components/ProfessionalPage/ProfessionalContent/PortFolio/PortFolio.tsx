@@ -17,6 +17,9 @@ export default function PortFolio() {
 }
 
 const ProjectCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   height: 200px
   background-color: var(--color-gray-400-transparent);
 `;
