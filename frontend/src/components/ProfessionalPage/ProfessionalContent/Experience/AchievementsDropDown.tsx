@@ -41,9 +41,11 @@ const DropDown = styled.div`
   display: var(--hidden);
   overflow: auto;
   position: absolute;
-  top: 15px;
-  left: 30px;
-  background-color: var(--color-secondary);
+  top: 25px;
+  right: 0;
+  left: 0;
+  color: var(--color-white);
+  background-color: var(--color-gray-400);
   padding: 16px;
   border-radius: 5px;
 `;

@@ -6,22 +6,28 @@ import { styled } from 'styled-components';
 
 export default function ProfessionalPage() {
   return (
-    <div>
+    <Wrapper>
       <Header />
-      <Wrapper>
+      <ContentWrapper>
         <SideMenuWrapper>
           <SideMenu />
         </SideMenuWrapper>
         <ProfessionalContentWrapper>
           <ProfessionalContent />
         </ProfessionalContentWrapper>
-      </Wrapper>
-    </div>
+      </ContentWrapper>
+    </Wrapper>
   );
 }
 
-
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+`;
+
+
+const ContentWrapper = styled.div`
   display: flex;
   align-items: start;
 `;
