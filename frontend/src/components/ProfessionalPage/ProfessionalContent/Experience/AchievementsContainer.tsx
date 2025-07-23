@@ -1,6 +1,5 @@
 import { styled } from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { ArrowRight } from 'react-feather';
 
 import AchievementsDropDown from './AchievementsDropDown';
 
@@ -9,7 +8,7 @@ export default function AchievementsContainer({achievements}: {achievements: str
                       .slice(0, 3)
                       .map((achievement, index) =>
                           <Achievement key={index}>
-                              <FontAwesomeIcon icon={faCircleChevronRight} />
+                              <Arrow size={'1.4rem'}/>
                               {achievement}
                           </Achievement>
                       );
@@ -32,6 +31,10 @@ export default function AchievementsContainer({achievements}: {achievements: str
   );
 
 }
+
+const Arrow = styled(ArrowRight)`
+  margin-top: 2px;
+`;
 
 const AchievementWrapper = styled.div`
   display: flex;
