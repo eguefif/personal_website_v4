@@ -11,19 +11,20 @@ export default function Header() {
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
 
   height: 128px;
   width: 450px;
   margin: auto;
-  padding: 34px
+  padding: 34px;
 `;
 
 const NavLink = styled.a`
+  display: inline;
   text-decoration: none;
   flex: 1;
   text-align: center;
-  color: var(--color-primary);
+  color: var(--color-white);
 `;

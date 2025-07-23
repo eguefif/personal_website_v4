@@ -3,16 +3,52 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
     html {
       --color-white: hsl(250 0% 83.1%);
-      --color-primary: hsl(220 50% 50%);
-      --color-secondary: hsl(120 50% 50%);
+      --color-primary: hwb(14 40% 2.4% / 0.33);
+      --color-secondary: hwb(40 84.3% 0% / 0.33);
 
-      --color-gray-400-transparent: hsla(250 0% 49.4% / 0.33);
+      --color-gray-400: hsl(250 0 49.4);
+
+      --color-gray-400-transparent: hsla(250 0% 49.4% / 0.2);
     }
 
   body {
     background-color: hsl(220deg, 10%, 10%);
     color: var(--color-white);
+
+    font-family: "Lato", arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
+
+  .lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  .lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 
   /* Thanks to Josh Comeau, the author of this CSS reset */
 

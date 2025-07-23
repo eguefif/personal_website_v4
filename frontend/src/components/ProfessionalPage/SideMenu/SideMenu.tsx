@@ -27,5 +27,5 @@ const NavLink = styled.a`
   text-decoration: none;
   flex: 1;
   text-align: center;
-  color: var(--color-primary);
+  color: var(--color-white);
 `;
