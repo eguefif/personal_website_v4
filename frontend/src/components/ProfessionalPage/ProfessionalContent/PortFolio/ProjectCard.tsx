@@ -5,7 +5,9 @@ import type { Project } from './FakeData';
 export default function ProjectCard({project} : { project: Project }) {
   return (
     <ProjectCardWrapper>
-      <ProjectImage src={project.image} />
+      <ImageWrapper>
+        <ProjectImage src={project.image.src} alt={project.image.alt} />
+      </ImageWrapper>
       <ProjectContent>
         <ProjectTitle>
           {project.title}
@@ -20,15 +22,21 @@ export default function ProjectCard({project} : { project: Project }) {
 
 const ProjectCardWrapper = styled.div`
   display: flex;
-  justify-content: start;
   background-color: var(--color-gray-400-transparent);
-  border-radius: 0 16px 16px 0;
+  border-radius: 16px;
   gap: 16px;
 `;
 
+const ImageWrapper = styled.div`
+  max-width: 224px;
+  max-height: 224px;
+`;
 
 const ProjectImage = styled.img`
+  border-radius: 16px 0px 0px 16px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const ProjectContent = styled.div`
