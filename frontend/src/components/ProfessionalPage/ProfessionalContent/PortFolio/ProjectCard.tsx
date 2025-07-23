@@ -21,6 +21,7 @@ const ProjectCardWrapper = styled.div`
   background-color: var(--color-gray-400-transparent);
   display: flex;
   flex-direction: column;
+  justify-content: start;
   gap: 16px;
   padding: 24px;
   margin: 24px auto;
