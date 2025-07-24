@@ -1,6 +1,7 @@
 import Header from './Header/Header';
 import ProfessionalContent from './ProfessionalContent/ProfessionalContent';
-import SideMenu from './SideMenu/SideMenu';
+import SideMenu from './SideBar/SideMenu';
+import Whoami from './SideBar/Whoami';
 
 import { styled } from 'styled-components';
 
@@ -9,9 +10,10 @@ export default function ProfessionalPage() {
     <Wrapper>
       <Header />
       <ContentWrapper>
-        <SideMenuWrapper>
+        <SideBarWrapper>
+          <Whoami />
           <SideMenu />
-        </SideMenuWrapper>
+        </SideBarWrapper>
         <ProfessionalContentWrapper>
           <ProfessionalContent />
         </ProfessionalContentWrapper>
@@ -29,15 +31,19 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   display: flex;
+  justify-content: center;
   align-items: start;
+  gap: 184px;
 `;
 
-const SideMenuWrapper = styled.div`
+const SideBarWrapper = styled.div`
   position: sticky;
   top: 0;
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 84px;
 `;
 
 const ProfessionalContentWrapper = styled.div`
-  flex: 1;
 `;
