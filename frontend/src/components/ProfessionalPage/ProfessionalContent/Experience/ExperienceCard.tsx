@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 
+import { H2 } from 'components/Commons/Titles';
 import type { Experience } from './data';
 import AchievementsContainer from './AchievementsContainer';
 
@@ -55,8 +56,7 @@ const Year = styled.span`
 `;
 
 
-const JobTitle = styled.h1`
-  font-size: 1.4rem;
+const JobTitle = styled(H2)`
 `;
 
 const TechList = styled.ul`

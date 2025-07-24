@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Lato", arial, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.1rem;
   }
 
   .lato-thin {

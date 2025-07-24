@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 import type { Project } from './FakeData';
+import { H2 } from 'components/Commons/Titles';
 
 export default function ProjectCard({project} : { project: Project }) {
   return (
@@ -46,7 +47,7 @@ const ProjectContent = styled.div`
   padding: 12px;
 `;
 
-const ProjectTitle = styled.div`
+const ProjectTitle = styled(H2)`
   text-align: center;
   font-size: 1.4rem;
 `;

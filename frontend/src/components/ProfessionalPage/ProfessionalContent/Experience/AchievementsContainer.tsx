@@ -20,19 +20,19 @@ export default function AchievementsContainer({achievements}: {achievements: str
   }
 
   return (
-        <AchievementWrapper>
-          <AchievementList>
-            {achievementsTag}
-          </AchievementList>
-          <RemainingAchievementWrapper>
-            {dropDown}
-          </RemainingAchievementWrapper>
-        </AchievementWrapper>
+    <AchievementWrapper>
+      <AchievementList>
+        {achievementsTag}
+      </AchievementList>
+      <RemainingAchievementWrapper>
+        {dropDown}
+      </RemainingAchievementWrapper>
+    </AchievementWrapper>
   );
 
 }
 
-const Arrow = styled(ArrowRight)`
+export const Arrow = styled(ArrowRight)`
   margin-top: 2px;
 `;
 

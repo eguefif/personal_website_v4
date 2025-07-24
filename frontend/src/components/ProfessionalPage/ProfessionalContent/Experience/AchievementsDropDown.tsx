@@ -1,7 +1,6 @@
 import { styled } from 'styled-components';
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Arrow } from './AchievementsContainer';
 
 import { Achievement, AchievementList} from './AchievementsContainer';
 
@@ -11,7 +10,7 @@ export default function AchievementsDropDown({achievements}: {achievements: stri
   const achievementEntries = achievements
                                     .map((achievement, index) =>
                                       <Achievement key={index}>
-                                          <FontAwesomeIcon icon={faCircleChevronRight} />
+                                          <Arrow size={'1.4rem'}/>
                                           {achievement}
                                       </Achievement>
                                   );
