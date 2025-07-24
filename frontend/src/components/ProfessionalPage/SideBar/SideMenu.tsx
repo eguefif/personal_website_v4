@@ -18,7 +18,6 @@ const Nav = styled.nav`
   gap: 34px;
 
   height: 64px;
-  width: 450px;
   margin: 0 auto;
   padding: 0 34px;
 `;

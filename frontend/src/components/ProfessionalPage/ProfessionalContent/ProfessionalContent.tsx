@@ -6,8 +6,8 @@ import Experience from './Experience/Experience';
 export default function ProfessionalContent() {
   return (
     <Wrapper>
-      <Experience />
       <Biopic />
+      <Experience />
       <PortFolio />
     </Wrapper>
   );

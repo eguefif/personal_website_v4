@@ -14,4 +14,7 @@ export default function Biopic() {
 
 const BiopicWrapper = styled.div`
   margin: auto;
+  line-height: 1.8;
+  text-align: justify;
+  text-indent: 2rem;
 `;
