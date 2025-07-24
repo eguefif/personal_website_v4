@@ -49,7 +49,6 @@ const ProjectContent = styled.div`
 
 const ProjectTitle = styled(H2)`
   text-align: center;
-  font-size: 1.4rem;
 `;
 
 const ProjectDescription = styled.div`
