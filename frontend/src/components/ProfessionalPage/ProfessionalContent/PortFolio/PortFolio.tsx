@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 import ProjectCard from './ProjectCard';
 
+import { H1 } from 'components/Commons/Titles';
 import PROJECTS from './FakeData';
 import type { Project } from './FakeData';
 
@@ -10,11 +11,21 @@ export default function PortFolio() {
     <ProjectCard key={project.id} project={project} />
   );
   return (
-    <ProjectCardWrapper>
-      { projects }
-    </ProjectCardWrapper>
+    <Wrapper>
+      <H1>Portfolio</H1>
+      <ProjectCardWrapper>
+        { projects }
+      </ProjectCardWrapper>
+      </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+`;
 
 const ProjectCardWrapper = styled.div`
   display: flex;
