@@ -17,14 +17,12 @@ const Nav = styled.nav`
   align-items: center;
   gap: 34px;
 
-  height: 64px;
   margin: 0 auto;
   padding: 0 34px;
 `;
 
 const NavLink = styled.a`
   text-decoration: none;
-  flex: 1;
   text-align: center;
   color: var(--color-white);
 `;
