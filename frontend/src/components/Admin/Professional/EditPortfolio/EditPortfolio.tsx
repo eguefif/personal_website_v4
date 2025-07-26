@@ -1,12 +1,16 @@
 import { styled } from 'styled-components';
 import PROJECTS from './FakeData';
 
+import TriggerButton from 'components/Commons/Buttons/TriggerButton';
+import ProjectFormDialog from './ProjectFormDialog';
+import ProjectCard from './ProjectCard';
+
 interface Project {
   id: number,
   title: string,
   description: string,
   tech: string[]
-  picture: {
+  image: {
     src: string,
     alt: string
   },
@@ -14,13 +18,12 @@ interface Project {
 
 export default function EditPortfolio() {
   const projects = PROJECTS.map( project =>
-    <Project key={project.id}>
-      {project.title}
-    </Project>
+    <ProjectCard key={project.id} project={project} />
   );
   return (
     <Wrapper>
       <h1>Edit Portfolio</h1>
+      <ProjectFormDialog trigger={<TriggerButton>Add Project</TriggerButton>} />
       <ProjectList>
         {projects}
       </ProjectList>
@@ -30,8 +33,8 @@ export default function EditPortfolio() {
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   position: relative;
   gap: 32px;
@@ -49,5 +52,5 @@ const Project = styled.div`
   width: 264px;
   background-color: var(--color-primary);
   border-radius: 8px;
-  
+  gap: 32px;
 `;

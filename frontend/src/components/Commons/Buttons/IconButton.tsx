@@ -2,40 +2,33 @@ import { styled } from 'styled-components';
 import { ReactNode } from 'react';
 
 interface IconButtonProps {
-  label: string;
+  iconSize: number;
   children: ReactNode;
 }
 
-const IconButton = ({label, children} :IconButtonProps) => {
+export default function IconButton(props: IconButtonProps) {
+  const padding = 10;
   return (
-    <Wrapper>
-      <Button>
-        {children}
-        <Label>{label}</Label>
-      </Button>
-    </Wrapper>
+    <Button style={{'--icon-size': props.iconSize + 'px', '--padding': padding + 'px'}}>
+      {props.children}
+    </Button>
   );
 }
 
-const Wrapper = styled.div`
-`
-
 const Button = styled.div`
-  border: solid 1px white;
-  width: 200px;
-  height: 200px;
+  border: solid 1px transparent;
+  padding: var(--padding)px;
+  width: calc(var(--padding) + var(--icon-size));
+  height: calc(var(--padding) + var(--icon-size));
   display: flex;
-  gap: 32px;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center;  
 
   &:hover {
-    background-color: var(--color-gray-400-transparent);
+    border: solid 1px var(--color-gray-400-alpha-50);
+    background-color: var(--color-gray-400-alpha-50);
 }
 `;
 
 const Label = styled.div`
 `;
-
-export default IconButton;

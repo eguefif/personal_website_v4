@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 import { Code, Info, Briefcase } from 'react-feather';
 import { Link, Outlet, useLocation } from 'react-router';
 
-import IconButton from 'components/Commons/Buttons/IconButton'
+import NavIconButton from 'components/Commons/Buttons/NavIconButton'
 import { H1 } from 'components/Commons/Titles'
 
 
@@ -13,13 +13,13 @@ export default function AdminProfessionalPage() {
     <Wrapper>
       <Nav>
         <StyledLink to="personal">
-          <IconButton label="Edit Personal"><Info size={60}/></IconButton>
+          <NavIconButton label="Edit Personal"><Info size={60}/></NavIconButton>
         </StyledLink>
         <StyledLink to="portfolio">
-          <IconButton label="Edit Portfolio"><Code size={60}/></IconButton>
+          <NavIconButton label="Edit Portfolio"><Code size={60}/></NavIconButton>
         </StyledLink>
         <StyledLink to="experience">
-          <IconButton label="Edit Experience"><Briefcase size={60}/></IconButton>
+          <NavIconButton label="Edit Experience"><Briefcase size={60}/></NavIconButton>
         </StyledLink>
       </Nav>
     </Wrapper>
