@@ -3,16 +3,53 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
     html {
       --color-white: hsl(250 0% 83.1%);
-      --color-primary: hwb(14 40% 2.4% / 0.33);
-      --color-secondary: hwb(40 84.3% 0% / 0.33);
+      --color-black: hsl(250 0 0);
+      --color-primary: hsl(41 89.2% 27%);
+      --color-primary-brighter: hsl(41 50% 40%);
+      --color-primary-transparent: hsla(41 89.2% 27% / 0.33);
+      --color-secondary: hsl(30 50 27);
 
+      --color-transparent: hsl(144 99 99 / 0.5);
+
+      --color-gray-50: hsl(250 0 98);
+      --color-gray-100: hsl(250 0 96);
+      --color-gray-200: hsl(250 0 89);
+      --color-gray-300: hsl(250 0 70);
       --color-gray-400: hsl(250 0 49.4);
+      --color-gray-500: hsl(250 0 39);
+      --color-gray-600: hsl(250 0 32);
+      --color-gray-700: hsl(250 0 25);
+      --color-gray-800: hsl(250 0 15);
+      --color-gray-900: hsl(250 0 9);
+      --color-gray-950: hsl(250 0 4);
 
-      --color-gray-400-transparent: hsla(250 0% 49.4% / 0.2);
+      /* Transparent variants */
+      --color-gray-50-alpha-10: hsl(250 0 98 / 0.1);
+      --color-gray-50-alpha-20: hsl(250 0 98 / 0.2);
+      --color-gray-50-alpha-50: hsl(250 0 98 / 0.5);
+      --color-gray-50-alpha-80: hsl(250 0 98 / 0.8);
+
+      --color-gray-400-alpha-10: hsl(250 0 49.4 / 0.1);
+      --color-gray-400-alpha-20: hsl(250 0 49.4 / 0.2);
+      --color-gray-400-alpha-50: hsl(250 0 49.4 / 0.5);
+      --color-gray-400-alpha-80: hsl(250 0 49.4 / 0.8);
+
+      --color-gray-600-alpha-10: hsl(250 0 32 / 0.1);
+      --color-gray-600-alpha-20: hsl(250 0 32 / 0.2);
+      --color-gray-600-alpha-50: hsl(250 0 32 / 0.5);
+      --color-gray-600-alpha-80: hsl(250 0 32 / 0.8);
+
+      --color-gray-900-alpha-10: hsl(250 0 9 / 0.1);
+      --color-gray-900-alpha-20: hsl(250 0 9 / 0.2);
+      --color-gray-900-alpha-50: hsl(250 0 9 / 0.5);
+      --color-gray-900-alpha-80: hsl(250 0 9 / 0.8);
+
+      --color-overlay: hsla(220, 15%, 10%, 0.6);
+      --color-background: hsl(220deg, 10%, 10%);
     }
 
   body {
-    background-color: hsl(220deg, 10%, 10%);
+    background-color: var(--color-background);
     color: var(--color-white);
 
     font-family: "Lato", arial, sans-serif;

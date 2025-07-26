@@ -13,24 +13,23 @@ export default function PersonalForm(personalInfo: PersonalInfo) {
       <FormWrapper>
 
         <InlineWrapper>
-          <InputLabel for="name">Name</InputLabel>
-          <TextInput type="text" name="name" id="name" placeholder={personalInfo.name} />
+          <InputLabel htmlFor="name">Name</InputLabel>
+          <TextInput type="text" name="name" id="name" value={personalInfo.name} />
         </InlineWrapper>
 
         <InlineWrapper>
-        <InputLabel for="title">Title</InputLabel>
-        <TextInput type="text" name="title" id="title" placeholder={personalInfo.title} />
+        <InputLabel htmlFor="title">Title</InputLabel>
+        <TextInput type="text" name="title" id="title" value={personalInfo.title} />
         </InlineWrapper>
 
         <InlineWrapper>
-        <InputLabel for="catch-phrase">Catch Phrase</InputLabel>
-        <TextInput type="text" name="catch-phrase" id="catch-phrase" placeholder={personalInfo.catchPhrase} />
+        <InputLabel htmlFor="catch-phrase">Catch Phrase</InputLabel>
+        <TextInput type="text" name="catch-phrase" id="catch-phrase" value={personalInfo.catchPhrase} />
         </InlineWrapper>
-
 
         <AreaWrapper>
-        <AreaLabel for="biopic">Biopic</AreaLabel>
-        <TextArea type="text" name="biopic" id="biopic" placeholder={personalInfo.biopic} />
+        <AreaLabel htmlFor="biopic">Biopic</AreaLabel>
+        <TextArea type="text" name="biopic" id="biopic" value={personalInfo.biopic} />
         </AreaWrapper>
         <SubmitButton>Save</SubmitButton>
       </FormWrapper>
