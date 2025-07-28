@@ -87,6 +87,7 @@ const Wrapper = styled.div`
 `;
 
 const CloseButton = styled(Dialog.Close)`
+  transform: scale(1.2);
   position: absolute;
   top: 15px;
   right: 15px;
@@ -94,7 +95,9 @@ const CloseButton = styled(Dialog.Close)`
   border: none;
   padding: 2px;
   color: var(--color-black);
+  pointer: cursor;
   &:hover {
     color: var(--color-gray-600);
+    transform: scale(1.5);
   }
 `;
