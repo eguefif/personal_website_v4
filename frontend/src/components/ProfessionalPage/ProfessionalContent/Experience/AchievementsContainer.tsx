@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { ArrowRight } from 'react-feather';
 
-import AchievementsDropDown from './AchievementsDropDown';
+import AchievementsHoverCard from './AchievementsHoverCard';
 
 export default function AchievementsContainer({achievements}: {achievements: string[]}) {
   let achievementsTag = achievements
@@ -13,10 +13,11 @@ export default function AchievementsContainer({achievements}: {achievements: str
                           </Achievement>
                       );
 
-  let dropDown;
+  let hoverCard;
   if (achievements.length >= 3) {
     const remainingAchievements = achievements.slice(3);
-    dropDown = <AchievementsDropDown achievements={remainingAchievements} />
+    hoverCard = <AchievementsHoverCard key="hovercard" achievements={remainingAchievements} />
+    achievementsTag.push(hoverCard);
   }
 
   return (
@@ -24,9 +25,6 @@ export default function AchievementsContainer({achievements}: {achievements: str
       <AchievementList>
         {achievementsTag}
       </AchievementList>
-      <RemainingAchievementWrapper>
-        {dropDown}
-      </RemainingAchievementWrapper>
     </AchievementWrapper>
   );
 
