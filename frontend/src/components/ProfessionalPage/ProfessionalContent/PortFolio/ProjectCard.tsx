@@ -23,7 +23,7 @@ export default function ProjectCard({project} : { project: Project }) {
 
 const ProjectCardWrapper = styled.div`
   display: flex;
-  background-color: var(--color-gray-400-transparent);
+  background-color: var(--color-gray-400-alpha-20);
   border-radius: 16px;
   gap: 16px;
 `;

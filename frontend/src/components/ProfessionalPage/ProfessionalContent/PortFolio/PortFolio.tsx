@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import ProjectCard from './ProjectCard';
 
-import { H1 } from 'components/Commons/Titles';
+import { SectionTitle } from 'components/Commons/Titles';
 import PROJECTS from './FakeData';
 import type { Project } from './FakeData';
 
@@ -11,8 +11,8 @@ export default function PortFolio() {
     <ProjectCard key={project.id} project={project} />
   );
   return (
-    <Wrapper>
-      <H1>Portfolio</H1>
+    <Wrapper id="Portfolio">
+      <SectionTitle title="Portfolio" />
       <ProjectCardWrapper>
         { projects }
       </ProjectCardWrapper>

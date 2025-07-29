@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 import ExperienceCard from './ExperienceCard';
-import { H1 } from 'components/Commons/Titles';
+import { SectionTitle } from 'components/Commons/Titles';
 import type { Experience } from './data.tsx';
 import EXPERIENCES from './data.tsx';
 
@@ -11,8 +11,8 @@ export default function Experience() {
   );
 
   return (
-    <Wrapper>
-      <H1>Resume</H1>
+    <Wrapper id="Experience">
+      <SectionTitle title="Resume" />
       <ExperienceWrapper>
         {experienceCards}
       </ExperienceWrapper>
