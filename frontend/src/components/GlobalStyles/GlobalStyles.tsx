@@ -52,7 +52,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--color-background);
     color: var(--color-white);
 
-    font-family: "Lato", arial, sans-serif;
+    font-family: 'Inter', arial, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.1rem;
