@@ -6,7 +6,7 @@ I used to program as a hobby while teaching as a profession. I don't teach anymo
 
 export default function Biopic() {
   return(
-    <BiopicWrapper>
+    <BiopicWrapper id="Whoiam">
       { BIOPIC }
     </BiopicWrapper>
   );

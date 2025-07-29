@@ -11,3 +11,21 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   font-size: 1.3rem;
 `;
+
+export const SectionTitle = ({title}: {title: string}) => {
+  return (
+    <Wrapper>
+      <H2>{title}</H2>
+      <LineBreak />
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div``;
+
+const LineBreak = styled.div`
+  background-color: var(--color-white);
+  height: 2px;
+  width: 100%;
+  margin-top: 8px;
+`;
