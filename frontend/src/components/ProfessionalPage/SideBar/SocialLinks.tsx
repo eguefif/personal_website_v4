@@ -1,14 +1,14 @@
 import { styled } from 'styled-components';
-import { GitHub } from 'react-feather';
-import { Linkedin } from 'react-feather';
+import { GitHub, Linkedin } from 'react-feather';
 
 export default function SocialLinks() {
+  const socialUsername = 'eguefif';
   return (
     <Wrapper>
-      <SocialLink>
+      <SocialLink href="https://linkedin.com/in/eguefif" target="_blank" rel="noopener noreferrer">
         <Linkedin />
       </SocialLink>
-      <SocialLink>
+      <SocialLink href="https://github.com/eguefif" target="_blank" rel="noopener noreferrer">
         <GitHub />
       </SocialLink>
     </Wrapper>
@@ -23,4 +23,12 @@ const Wrapper = styled.div`
 
 const SocialLink = styled.a`
   text-decoration: none;
+  color: var(--color-white);
+  transform: scale(1);
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+    color: var(--color-primary-brighter);
+  }
 `;
