@@ -6,8 +6,8 @@ const GlobalStyles = createGlobalStyle`
       --color-white: hsl(250 0% 83.1%);
       --color-black: hsl(250 0 0);
 
-      --color-primary: hsl(158 50% 38%);
-      --color-primary-brighter: hsl(158 50% 60%);
+      --color-primary: hsl(223 40% 40%);
+      --color-primary-brighter: hsl(210 70% 92%);
       --color-primary-transparent: hsla(41 89.2% 27% / 0.33);
       --color-secondary: hsl(30 50 27);
 
@@ -50,8 +50,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
   body {
-    background: radial-gradient(circle at 10% 10%, hsl(158 30% 8%) 0%, transparent 50%),
-                radial-gradient(circle at 100% 100%, hsl(158 30% 8%) 0%, transparent 50%),
+    background: radial-gradient(circle at 10% 10%, hsl(210 30% 8%) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, hsl(210 30% 8%) 0%, transparent 50%),
                 hsl(220deg, 28%, 5%);
     color: var(--color-white);
 
