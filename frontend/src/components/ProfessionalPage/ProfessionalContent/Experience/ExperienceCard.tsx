@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 
 import { H2 } from 'components/Commons/Titles';
 import type { Experience } from './data';
+import { TechList, TechEntry } from 'components/Commons/TechTags';
 import AchievementsContainer from './AchievementsContainer';
 
 export default function Experience({experience} : {experience: Experience}) {
