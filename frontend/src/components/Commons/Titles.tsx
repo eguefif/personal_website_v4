@@ -21,7 +21,9 @@ export const SectionTitle = ({title}: {title: string}) => {
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  
+`;
 
 const LineBreak = styled.div`
   background-color: var(--color-white);

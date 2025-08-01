@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { ArrowRight } from 'react-feather';
 
-import AchievementsHoverCard from './AchievementsHoverCard';
+import AchievementsCollapsible from './AchievementsCollapsible';
 
 export default function AchievementsContainer({achievements}: {achievements: string[]}) {
   let achievementsTag = achievements
@@ -16,7 +16,7 @@ export default function AchievementsContainer({achievements}: {achievements: str
   let hoverCard;
   if (achievements.length >= 3) {
     const remainingAchievements = achievements.slice(3);
-    hoverCard = <AchievementsHoverCard key="hovercard" achievements={remainingAchievements} />
+    hoverCard = <AchievementsCollapsible key="collapsible" achievements={remainingAchievements} />
     achievementsTag.push(hoverCard);
   }
 
