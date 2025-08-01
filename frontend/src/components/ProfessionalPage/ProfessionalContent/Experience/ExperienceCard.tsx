@@ -40,40 +40,27 @@ const Years = styled.div`
   max-width: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 24px;
+  align-items: start;
+  padding: 0px;
+  padding-right: 24px;
+  padding-top: 4px;
 `;
 
 const Main = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 `;
 
 const Year = styled.span`
   font-weight: 700;
+  line-height: 1.5;
 `;
 
 
 const JobTitle = styled(H2)`
-`;
-
-const TechList = styled.ul`
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  justify-content: space-between;
   padding: 0;
-`;
-
-const TechEntry = styled.li`
-  padding: 8px;
-  list-style-type: none;
-  border-radius: 15px;
-  border: 1px solid var(--color-primary);
-  background-color: var(--color-primary);
-  text-align: center;
-  height: 100%;
-  width: 100%;
+  margin: 0;
+  line-height: 1.5;
 `;

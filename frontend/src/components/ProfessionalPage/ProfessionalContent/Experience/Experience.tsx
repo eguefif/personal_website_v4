@@ -23,7 +23,7 @@ export default function Experience() {
 const ExperienceWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 64px;
   margin: 0 auto;
 `;
 
