@@ -2,10 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     html {
+      --color-background: hsl(220deg, 28%, 5%);
       --color-white: hsl(250 0% 83.1%);
       --color-black: hsl(250 0 0);
-      --color-primary: hsl(41 89.2% 27%);
-      --color-primary-brighter: hsl(41 50% 40%);
+
+      --color-primary: hsl(158 50% 38%);
+      --color-primary-brighter: hsl(158 50% 60%);
       --color-primary-transparent: hsla(41 89.2% 27% / 0.33);
       --color-secondary: hsl(30 50 27);
 
@@ -45,11 +47,12 @@ const GlobalStyles = createGlobalStyle`
       --color-gray-900-alpha-80: hsl(250 0 9 / 0.8);
 
       --color-overlay: hsla(220, 15%, 10%, 0.6);
-      --color-background: hsl(220deg, 10%, 10%);
     }
 
   body {
-    background-color: var(--color-background);
+    background: radial-gradient(circle at 10% 10%, hsl(158 30% 8%) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, hsl(158 30% 8%) 0%, transparent 50%),
+                hsl(220deg, 28%, 5%);
     color: var(--color-white);
 
     font-family: 'Inter', arial, sans-serif;
