@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     html {
-      --color-background: hsl(220deg, 28%, 5%);
       --color-white: hsl(250 0% 83.1%);
       --color-black: hsl(250 0 0);
 
@@ -50,8 +49,9 @@ const GlobalStyles = createGlobalStyle`
     }
 
   body {
-    background: radial-gradient(circle at 10% 10%, hsl(210 30% 8%) 0%, transparent 50%),
-                radial-gradient(circle at 100% 100%, hsl(210 30% 8%) 0%, transparent 50%),
+    background: radial-gradient(circle at 0% 0%, hsl(210 30% 8%) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, hsl(210 30% 8%) 0%, transparent 75%),
+                radial-gradient(circle at 100% 100%, hsl(210 30% 8%) 0%, transparent 100%),
                 hsl(220deg, 28%, 5%);
     color: var(--color-white);
 
