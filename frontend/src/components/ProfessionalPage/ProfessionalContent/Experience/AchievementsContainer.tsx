@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { ArrowRight } from 'react-feather';
+import { QUERIES } from 'components/constants';
 
 import AchievementsCollapsible from './AchievementsCollapsible';
 
@@ -37,6 +38,7 @@ export const Arrow = styled(ArrowRight)`
 const AchievementWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 8px;
   gap: 8px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -53,6 +55,7 @@ export const AchievementList = styled.ul`
   flex-direction: column;
   gap: 8px;
   list-style-type: none;
+  padding: 0px;
 `;
 
 export const Achievement = styled.li`

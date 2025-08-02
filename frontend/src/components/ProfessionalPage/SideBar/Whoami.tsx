@@ -20,13 +20,13 @@ const Wrapper = styled.div`
   gap: 8px;
 `;
 
-const Name = styled(H1)`
-`;
+const Name = styled(H1)` `;
 
 const Title = styled(H2)`
   font-weight: 400;
 `;
 
 const FormerTitle = styled(H3)`
+  text-align: center;
   font-weight: 400;
 `;

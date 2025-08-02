@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { QUERIES } from 'components/constants';
 
 import NavLink from './NavLink';
 

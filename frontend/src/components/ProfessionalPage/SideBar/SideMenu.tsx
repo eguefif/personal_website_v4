@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { QUERIES } from 'components/constants';
 
 export default function SideMenu() {
   return (
@@ -31,15 +32,19 @@ const UnderLine = styled.div`
 `;
 
 const Nav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 34px;
+  display: none;
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 34px;
+  }
 
   margin: 0 auto;
   padding: 0 34px;
   position: relative;
+  
 `;
 
 const NavLink = styled.a`

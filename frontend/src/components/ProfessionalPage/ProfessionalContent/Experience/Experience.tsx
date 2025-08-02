@@ -24,13 +24,13 @@ const ExperienceWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 64px;
-  margin: 0 auto;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  justify-content: center;
   align-items: center;
+  gap: 32px;
 `;
 

@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 
+import { QUERIES } from 'components/constants';
 import { H2 } from 'components/Commons/Titles';
 import type { Experience } from './data';
 import { TechList, TechEntry } from 'components/Commons/TechTags';
@@ -33,7 +34,15 @@ export default function Experience({experience} : {experience: Experience}) {
 
 const Wrapper = styled.div`
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  @media ${QUERIES.laptopAndUp} {
+    flex-direction: row;
+    align-items: start;
+    gap: 24px;
+  }
 `;
 
 const Years = styled.div`
@@ -41,10 +50,17 @@ const Years = styled.div`
   max-width: 150px;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   padding: 0px;
-  padding-right: 24px;
-  padding-top: 4px;
+
+  @media ${QUERIES.laptopAndUp} {
+    padding-top: 6px;
+  }
+`;
+
+const Year = styled.span`
+  font-weight: 700;
+  line-height: 1.5;
 `;
 
 const Main = styled.div`
@@ -54,14 +70,13 @@ const Main = styled.div`
   gap: 16px;
 `;
 
-const Year = styled.span`
-  font-weight: 700;
-  line-height: 1.5;
-`;
-
-
 const JobTitle = styled(H2)`
+  text-align: center;
   padding: 0;
   margin: 0;
   line-height: 1.5;
+
+  @media ${QUERIES.laptopAndUp} {
+    text-align: left;
+  }
 `;
