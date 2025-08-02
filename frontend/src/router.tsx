@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     path: '/',
     Component: App,
   },
-  adminRouter,
+  ...adminRouter,
 ]);
 
 export default router;
