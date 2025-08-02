@@ -16,6 +16,8 @@ export default function ProfessionalContent() {
 const Wrapper = styled.div`
   max-width: 700px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 104px;
 `;

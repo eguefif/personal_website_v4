@@ -41,12 +41,16 @@ const Link = styled.a`
     transform: rotate(-90deg);
     transform-origin: 0% 0%;
   }
-  &:hover:before {
-    opacity: 1;
-    left: 35%;
-    transform: rotate(0deg);
-    transform-origin: 0 0;
-    transition: all 300ms;
+
+    &:hover:before {
+      opacity: 1;
+      @media(prefers-reduced-motion: no-preference){
+        left: 35%;
+        transform: rotate(0deg);
+        transform-origin: 0 0;
+        transition: all 300ms;
+      }
+    }
   }
 
   &::after {
@@ -64,9 +68,11 @@ const Link = styled.a`
   }
   &:hover:after {
     opacity: 1;
-    right: 35%;
-    transform: rotate(0deg);
-    transform-origin: 100% 100%;
-    transition: all 300ms;
+    @media(prefers-reduced-motion: no-preference){
+      right: 35%;
+      transform: rotate(0deg);
+      transform-origin: 100% 100%;
+      transition: all 300ms;
+    }
   }
 `;
