@@ -14,12 +14,15 @@ export default function Header() {
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 64px;
+  gap: 32px;
+  margin:auto;
+  padding: 32px;
 
-  height: 128px;
-  width: 700px;
-  margin: auto;
-  padding: 34px;
+  @media ${QUERIES.laptopAndUp} {
+    gap: 64px;
+    height: 128px;
+    width: 700px;
+  }
 `;
