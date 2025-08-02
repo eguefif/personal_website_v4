@@ -4,8 +4,6 @@ import GlobalStyles from 'components/GlobalStyles/GlobalStyles';
 import ProfessionalPage from 'components/ProfessionalPage/ProfessionalPage';
 import Header from 'components/Header/Header';
 
-
-
 function App() {
   return (
     <Wrapper>
