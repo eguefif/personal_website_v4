@@ -4,8 +4,9 @@ import { QUERIES } from 'components/constants';
 import SideMenu from './SideMenu';
 import SocialLinks from './SocialLinks';
 import Whoami from './Whoami';
+import type { User } from 'components/ProfessionalPage/useFetchuser'
 
-export default function SideBar({ user }) {
+export default function SideBar({ user }: {user: User}) {
   return (
       <SideBarWrapper>
         <Whoami user={user}/>

@@ -17,7 +17,7 @@ const useFetchUser = () => {
     const fetchData = async () => {
       setLoading(true);
       try {  
-        const {data} = await axios.get('/api');
+        const {data} = await axios.get('/professional');
         setUserData(data);
       } catch(error) {
         console.error(error.message)
