@@ -1,11 +1,20 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+
+origins = [
+    "http://localhost:5173"
+]
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:5173",
-]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 WHOAMI = {
         "name": "Emmanuel Guefif",
@@ -18,6 +27,12 @@ I like web development because it's the best way to solve people's problems. I a
     """
 }
 
-@app.get("/")
-async def whoami():
+class ProfessionalData(BaseModel):
+    name: str
+    title: str
+    catchPhrase: str
+    biopic: str
+
+@app.get("/professional/")
+async def professional():
     return WHOAMI

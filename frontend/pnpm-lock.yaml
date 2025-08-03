@@ -38,9 +38,6 @@ importers:
       react-router:
         specifier: ^7.7.1
         version: 7.7.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      redux:
-        specifier: ^5.0.1
-        version: 5.0.1
       styled-components:
         specifier: ^6.1.19
         version: 6.1.19(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
