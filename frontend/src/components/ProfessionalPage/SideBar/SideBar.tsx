@@ -5,10 +5,10 @@ import SideMenu from './SideMenu';
 import SocialLinks from './SocialLinks';
 import Whoami from './Whoami';
 
-export default function SideBar() {
+export default function SideBar({ user }) {
   return (
       <SideBarWrapper>
-        <Whoami />
+        <Whoami user={user}/>
         <SideMenu />
         <SocialLinks />
       </SideBarWrapper>

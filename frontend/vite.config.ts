@@ -8,5 +8,22 @@ export default defineConfig({
     alias: {
       components: path.resolve(__dirname, 'src/components'),
     }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:8000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq, req) => {
+            if (req.headers.origin) {
+              proxyReq.setHeader('origin', 'http://127.0.0.1:8000');
+              proxyReq.setHeader('referer', 'http://127.0.0.1:8000');
+            }
+          });
+        },
+      },
+    },
   }
 })
