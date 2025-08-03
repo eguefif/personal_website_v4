@@ -10,8 +10,6 @@ export default function AdminLogin() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add login logic here
-    console.log('Login attempt:', { username, password });
   };
 
   return (
