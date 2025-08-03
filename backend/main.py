@@ -1,8 +1,13 @@
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 
 from user_model import User
 from database import SessionDep
+
+origins = [
+    "http://localhost:5173"
+]
 
 origins = [
     "http://localhost:5173"
