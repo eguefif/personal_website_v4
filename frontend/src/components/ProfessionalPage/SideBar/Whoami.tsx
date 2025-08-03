@@ -1,13 +1,14 @@
 import { styled } from 'styled-components';
 
 import { H1, H2, H3 } from 'components/Commons/Titles';
+import type { User } from 'components/ProfessionalPage/useFetchUser';
 
-export default function Whoami() {
+export default function Whoami({ user }: { user: User}) {
   return (
     <Wrapper>
-      <Name>Emmanuel Guefif</Name>
-      <Title>Mid-level developer</Title>
-      <FormerTitle>Former elementary school teacher</FormerTitle>
+      <Name>{user?.name}</Name>
+      <Title>{user?.title}</Title>
+      <CatchPhrase>{user?.catchPhrase}</CatchPhrase>
     </Wrapper>
   );
 }
@@ -26,7 +27,7 @@ const Title = styled(H2)`
   font-weight: 400;
 `;
 
-const FormerTitle = styled(H3)`
+const CatchPhrase = styled(H3)`
   text-align: center;
   font-weight: 400;
 `;

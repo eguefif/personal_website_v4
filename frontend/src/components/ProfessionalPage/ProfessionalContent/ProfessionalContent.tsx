@@ -2,11 +2,12 @@ import { styled } from 'styled-components';
 import Biopic from './Biopic';
 import PortFolio from './PortFolio/PortFolio';
 import Experience from './Experience/Experience';
+import type { User } from '../useFetchUser';
 
-export default function ProfessionalContent() {
+export default function ProfessionalContent({ user }: { user: User | null }) {
   return (
     <Wrapper>
-      <Biopic />
+      <Biopic user={user} />
       <Experience />
       <PortFolio />
     </Wrapper>

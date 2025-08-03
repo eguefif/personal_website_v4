@@ -10,7 +10,6 @@ import type { Project } from './FakeData';
 
 export default function PortFolio() {
   const tabletAndUp = matchMedia(QUERIES.tabletAndUp).matches;
-  console.log(tabletAndUp);
   const ProjectCard = tabletAndUp ? ProjectCardLaptop : ProjectCardMobile;
   const projects = PROJECTS.map((project: Project) => 
     <ProjectCard key={project.id} project={project} />

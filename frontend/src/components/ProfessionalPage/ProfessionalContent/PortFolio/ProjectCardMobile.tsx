@@ -53,7 +53,8 @@ const TopWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  max-width: 224px;
+  max-width: 100%;
+  margin: auto;
 `;
 
 const ProjectImage = styled.img`
