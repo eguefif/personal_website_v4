@@ -11,7 +11,7 @@ I used to program as a hobby while teaching as a profession. I don't teach anymo
 
 I like web development because it's the best way to solve people's problems. I also have a passion for low-level programming. When I finish a project, book, or article about it, it's like I've added a new piece to the big puzzle of computer systems. I love it!
     """,
-    "password": "12345",
+    "password": "",
 }
 
 
