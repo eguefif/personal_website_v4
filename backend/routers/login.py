@@ -55,9 +55,6 @@ async def authenticate_user(form_data: OAuth2PasswordRequestForm, user: User) ->
 
 @router.post("/token")
 async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], session: SessionDep):
-    print("HELLO - endpoint reached");
-    print(f"Username: {form_data.username}")
-    print(f"Password length: {len(form_data.password) if form_data.password else 'None'}")
     user = await get_user(form_data.username, session)
     if not await authenticate_user(form_data, user):
         raise HTTPException(status_code=401, 

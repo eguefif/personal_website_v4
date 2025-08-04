@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from 'components/api';
 import { useEffect, useState } from 'react';
 
 export interface User {
@@ -17,7 +17,7 @@ const useFetchUser = () => {
     const fetchData = async () => {
       setLoading(true);
       try {  
-        const {data} = await axios.get('/professional');
+        const {data} = await api.get('/professional');
         setUserData(data);
       } catch(error) {
         console.error(error.message)
