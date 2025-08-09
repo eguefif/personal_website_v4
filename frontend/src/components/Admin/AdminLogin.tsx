@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import  api from 'components/api';
+import { useState, useEffect, useRef } from 'react';
 import { styled } from 'styled-components';
+import { useNavigate } from 'react-router';
 
 import GlobalStyles from 'components/GlobalStyles/GlobalStyles';
 import { InlineWrapper, InputLabel, TextInput, SubmitButton } from 'components/Commons/Form';
@@ -7,10 +9,39 @@ import { InlineWrapper, InputLabel, TextInput, SubmitButton } from 'components/C
 export default function AdminLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [user, setUser] = useState('');
+  const navigate = useNavigate();
+  const isSubmittingRef = useRef(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    isSubmittingRef.current = true;
+    
+    try {
+      const response = await api.post('/token/', 
+        {
+          username: username,
+          password: password,
+        },{
+        headers: {
+              'Content-Type': 'multipart/form-data'
+          }});
+      setUser(response.data);
+      console.log(response.data);
+      localStorage.setItem('user', response.data);
+    } catch (error) {
+      console.error('Login error:', error);
+    } finally {
+      isSubmittingRef.current = false;
+    }
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate('/admin');
+    }
+  }, [user, navigate]);
 
   return (
     <LoginWrapper>
