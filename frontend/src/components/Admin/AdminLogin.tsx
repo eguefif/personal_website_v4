@@ -1,5 +1,5 @@
 import  api from 'components/api';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { styled } from 'styled-components';
 import { useNavigate } from 'react-router';
 
@@ -10,23 +10,38 @@ export default function AdminLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [user, setUser] = useState('');
+  const navigate = useNavigate();
+  const isSubmittingRef = useRef(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    let formData = new FormData();
-    formData.append('username', username);
-    formData.append('password', password);
-    const response = api.post('/token', 
-      formData
-      );
-    setUser(response.data);
-    localStorage.setItem('user', response.data);
-    console.log(response.data);
+    
+    isSubmittingRef.current = true;
+    
+    try {
+      const response = await api.post('/token/', 
+        {
+          username: username,
+          password: password,
+        },{
+        headers: {
+              'Content-Type': 'multipart/form-data'
+          }});
+      setUser(response.data);
+      console.log(response.data);
+      localStorage.setItem('user', response.data);
+    } catch (error) {
+      console.error('Login error:', error);
+    } finally {
+      isSubmittingRef.current = false;
+    }
   };
 
-  if (user) {
-    useNavigate('admin')
-  }
+  useEffect(() => {
+    if (user) {
+      navigate('/admin');
+    }
+  }, [user, navigate]);
 
   return (
     <LoginWrapper>
