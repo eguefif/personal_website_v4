@@ -1,13 +1,13 @@
 import { styled } from 'styled-components';
 
 import GlobalStyles from 'components/GlobalStyles/GlobalStyles';
-import ProfessionalPage from 'components/ProfessionalPage';
+import MainLayout from 'components/MainLayout';
 
 
 function App() {
   return (
     <Wrapper>
-      <ProfessionalPage />
+      <MainLayout />
       <Footer />
       <GlobalStyles />
     </Wrapper>

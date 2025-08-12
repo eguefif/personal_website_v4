@@ -42,6 +42,7 @@ const ProjectCardWrapper = styled.div`
   background-color: var(--color-gray-400-alpha-20);
   border-radius: 16px;
   gap: 16px;
+  width: 676px;
 `;
 
 const TopWrapper = styled.div`
@@ -50,7 +51,7 @@ const TopWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  max-width: 224px;
+  max-width: 184px;
 `;
 
 const ProjectImage = styled.img`
