@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 import { QUERIES } from 'components/constants';
 import { H2 } from 'components/Commons/Titles';
-import type { Experience } from './data';
+import type { Experience } from './XPdata';
 import { TechList, TechEntry } from 'components/Commons/TechTags';
 import AchievementsContainer from './AchievementsContainer';
 
@@ -15,9 +15,14 @@ export default function Experience({experience} : {experience: Experience}) {
   return (
     <Wrapper>
       <Years>
-        <Year>{experience.start}</Year>
-        <span>-</span>
-        <Year>{experience.end}</Year>
+        <YearRange>
+          <Year>{experience.start}</Year>
+          <span>-</span>
+          <Year>{experience.end}</Year>
+        </YearRange>
+        <Company href={experience.link} target="_blank" rel="noopener noreferrer">
+          {experience.company}
+        </Company>
       </Years>
 
       <Main>
@@ -33,6 +38,7 @@ export default function Experience({experience} : {experience: Experience}) {
 
 
 const Wrapper = styled.div`
+  width: 676px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -49,18 +55,40 @@ const Years = styled.div`
   flex-shrink: 999;
   max-width: 150px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px;
+  gap: 8px;
 
   @media ${QUERIES.laptopAndUp} {
     padding-top: 6px;
   }
 `;
 
+const YearRange = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Year = styled.span`
   font-weight: 700;
   line-height: 1.5;
+`;
+
+const Company = styled.a`
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--color-gray-300);
+  text-decoration: none;
+  cursor: pointer;
+  
+  &:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
 `;
 
 const Main = styled.div`

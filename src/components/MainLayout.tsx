@@ -1,10 +1,10 @@
-import ProfessionalContent from './Content/Content';
+import ProfessionalContent from './ProfessionalContent/ProfessionalContent';
 import Bio from './Bio/Bio';
 import { QUERIES } from 'components/constants';
 
 import { styled } from 'styled-components';
 
-export default function ProfessionalPage() {
+export default function MainLayout() {
   return (
     <Wrapper>
       <Bio />
