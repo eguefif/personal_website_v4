@@ -12,7 +12,6 @@ export default function Experience() {
 
   return (
     <Wrapper id="Experience">
-      <SectionTitle title="Resume" />
       <ExperienceWrapper>
         {experienceCards}
       </ExperienceWrapper>

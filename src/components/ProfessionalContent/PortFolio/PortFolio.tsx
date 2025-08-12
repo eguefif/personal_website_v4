@@ -16,7 +16,6 @@ export default function PortFolio() {
   );
   return (
     <Wrapper id="Portfolio">
-      <SectionTitle title="Portfolio" />
       <ProjectCardWrapper>
         { projects }
       </ProjectCardWrapper>

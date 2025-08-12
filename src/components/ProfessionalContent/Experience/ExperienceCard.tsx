@@ -33,6 +33,7 @@ export default function Experience({experience} : {experience: Experience}) {
 
 
 const Wrapper = styled.div`
+  width: 676px;
   display: flex;
   flex-direction: column;
   justify-content: start;
