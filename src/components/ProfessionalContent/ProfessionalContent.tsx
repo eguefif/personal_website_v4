@@ -13,18 +13,17 @@ export default function ProfessionalContent() {
   const handleMenuChange = (newState: string) => {
     if (newState !== menuState && !isTransitioning) {
       setIsTransitioning(true);
-      setIsVisible(false); // Start fade out
+      setIsVisible(false);
     }
   };
 
   useEffect(() => {
     if (!isVisible && isTransitioning) {
-      // After fade out completes, change content and fade in
       const timer = setTimeout(() => {
         setMenuState(prevState => prevState === 'experience' ? 'portfolio' : 'experience');
         setIsVisible(true);
         setIsTransitioning(false);
-      }, 200); // Match transition duration
+      }, 200); 
       
       return () => clearTimeout(timer);
     }
@@ -44,6 +43,7 @@ export default function ProfessionalContent() {
 
 const Wrapper = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 64px;
 `;
