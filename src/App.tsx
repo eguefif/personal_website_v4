@@ -74,9 +74,7 @@ const MainLayoutContainer = styled.div`
   flex-direction: column;
   gap: 84px;
   animation: ${MainLayoutAnimation} 1000ms both;
-  animation-delay: 0ms;/*4000ms*/;
+  animation-delay: 4000ms;/*4000ms*/;
 `;
 
-
 export default App
-
