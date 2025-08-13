@@ -10,14 +10,14 @@ export default function AchievementsCollapsible({achievements}: {achievements: s
   const [open, setOpen] = useState(false);
 
   const triggerContent = !open ?
-            <ShowControl><ChevronDown /><TriggerText>Show More</TriggerText></ShowControl>
-            : <ShowControl><ChevronUp /><TriggerText>Show Less</TriggerText></ShowControl>
+            <ShowControl><ChevronDown size={'1.4rem'} strokeWidth={1.5} /><TriggerText>Show More</TriggerText></ShowControl>
+            : <ShowControl><ChevronUp size={'1.4rem'} strokeWidth={1.5} /><TriggerText>Show Less</TriggerText></ShowControl>
              
 
   const achievementEntries = achievements
                                     .map((achievement, index) =>
                                       <Achievement key={index}>
-                                          <Arrow size={'1.4rem'}/>
+                                          <Arrow size={'1.4rem'} strokeWidth={1.5}/>
                                           {achievement}
                                       </Achievement>
                                   );
