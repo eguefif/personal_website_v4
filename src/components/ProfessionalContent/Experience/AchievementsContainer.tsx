@@ -9,7 +9,7 @@ export default function AchievementsContainer({achievements}: {achievements: str
                       .slice(0, 3)
                       .map((achievement, index) =>
                           <Achievement key={index}>
-                              <Arrow size={'1.4rem'}/>
+                              <Arrow size={'1.4rem'} strokeWidth={1.5}/>
                               {achievement}
                           </Achievement>
                       );

@@ -25,11 +25,11 @@ export default function NavLink({label, active, onClick} : NavLinkProps) {
 
 
 const UnderLine = styled.div`
-  height: 2px;
+  height: 1px;
   width: 100%;
   background-color: var(--color-white);
   position: absolute;
-  bottom: 0;
+  top: -8px;
   left: 0;
   opacity: 0;
   transition: opacity 0.3s;

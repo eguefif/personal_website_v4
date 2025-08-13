@@ -30,4 +30,6 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-white);
 `;
