@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
 
 const BIOPIC = `
 I used to program as a hobby while teaching as a profession. I don't teach anymore, but I still program, and I get paid for it. I am a lifelong learner and a curious man; programming is a great activity. I can learn about technology and my client's domain. I studied sociology, and I've learned about asking questions and trying to understand people. 

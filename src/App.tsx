@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
 import { useState, useEffect } from 'react';
 
 import GlobalStyles from 'components/GlobalStyles/GlobalStyles';
@@ -6,44 +6,15 @@ import MainLayout from 'components/MainLayout';
 import Introduction from 'components/Introduction/Introduction';
 
 function App() {
-  const [showIntroduction, setShowIntroduction] = useState(true);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [showMainLayout, setShowMainLayout] = useState(false);
-  const [mainLayoutVisible, setMainLayoutVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsAnimating(true);
-      setShowMainLayout(true);
-      
-      setTimeout(() => {
-        setMainLayoutVisible(true);
-      }, 50);
-      
-      setTimeout(() => {
-        setShowIntroduction(false);
-        setIsAnimating(false);
-      }, 600);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <Wrapper>
-      <AnimationContainer>
-        {showIntroduction && (
-          <IntroductionContainer $isAnimating={isAnimating}>
-            <Introduction />
-          </IntroductionContainer>
-        )}
-        {showMainLayout && (
-          <MainLayoutContainer $visible={mainLayoutVisible}>
-            <MainLayout />
-            <Footer />
-          </MainLayoutContainer>
-        )}
-      </AnimationContainer>
+        <IntroductionContainer>
+          <Introduction />
+        </IntroductionContainer>
+        <MainLayoutContainer>
+          <MainLayout />
+          <Footer />
+        </MainLayoutContainer>
       <GlobalStyles />
     </Wrapper>
   )
@@ -60,24 +31,45 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `;
 
-const AnimationContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+const IntroAnimation = keyframes`
+  0% {
+    transform: translateY(15%);
+    opacity: 0
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
 `;
 
-const IntroductionContainer = styled.div<{ $isAnimating: boolean }>`
+const IntroductionContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: ${props => props.$isAnimating ? 'translateY(-100%)' : 'translateY(0)'};
+  animation: ${IntroAnimation} 4500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 `;
 
-const MainLayoutContainer = styled.div<{ $visible: boolean }>`
+const MainLayoutAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
+const MainLayoutContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -86,13 +78,10 @@ const MainLayoutContainer = styled.div<{ $visible: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 84px;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  
-  ${props => props.$visible && `
-    opacity: 1;
-  `}
+  animation: ${MainLayoutAnimation} 1000ms both;
+  animation-delay: 4000ms;/*4000ms*/;
 `;
+
 
 export default App
 

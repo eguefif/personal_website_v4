@@ -3,14 +3,14 @@ import { QUERIES } from 'components/constants';
 
 import Biopic from './Biopic';
 import SocialLinks from './SocialLinks';
-import Whoami from './Whoami';
+import PersonalInfo from 'components/Commons/PersonalInfo';
 
 export default function SideBar() {
   return (
       <SideBarWrapper>
-        <Whoami />
-        <SocialLinks />
+        <PersonalInfo />
         <Biopic />
+        <SocialLinks />
       </SideBarWrapper>
   );
 }
