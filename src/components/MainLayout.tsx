@@ -1,5 +1,6 @@
 import ProfessionalContent from './ProfessionalContent/ProfessionalContent';
 import Bio from './Bio/Bio';
+import ThemeToggle from './Commons/ThemeToggle';
 import { QUERIES } from 'components/constants';
 
 import { styled } from 'styled-components';
@@ -7,6 +8,7 @@ import { styled } from 'styled-components';
 export default function MainLayout() {
   return (
     <Wrapper>
+      <ThemeToggle />
       <Bio />
       <ProfessionalContent />
     </Wrapper>

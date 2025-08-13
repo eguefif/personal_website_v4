@@ -14,7 +14,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-gray-900) 100%);
 `;
 
 const AnimatedPersonalInfo = styled(PersonalInfo)`
