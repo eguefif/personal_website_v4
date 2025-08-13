@@ -83,10 +83,19 @@ const Company = styled.a`
   color: var(--color-gray-300);
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.2s ease;
   
-  &:hover {
-    transform: scale(1.1);
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 

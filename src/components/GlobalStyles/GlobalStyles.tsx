@@ -117,6 +117,9 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
     font-size: 1.1rem;
+  }
+
+  body {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
@@ -234,10 +237,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* 3. Enable keyword animations */
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      interpolate-size: allow-keywords;
-    }
+  html {
+    interpolate-size: allow-keywords;
   }
 
   body {

@@ -32,7 +32,10 @@ const UnderLine = styled.div`
   top: -8px;
   left: 0;
   opacity: 0;
-  transition: opacity 0.3s;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.3s;
+  }
 `;
 
 const StyledLink = styled.a`
@@ -40,11 +43,13 @@ const StyledLink = styled.a`
   cursor: pointer;
   font-size: var(--font-size);
   font-weight: var(--weight);
-  transition: font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out, transform 0.3s;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    transition: font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out, transform 0.3s;
 
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
