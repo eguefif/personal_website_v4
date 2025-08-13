@@ -13,16 +13,11 @@ function App() {
         </IntroductionContainer>
         <MainLayoutContainer>
           <MainLayout />
-          <Footer />
         </MainLayoutContainer>
       <GlobalStyles />
     </Wrapper>
   )
 }
-
-const Footer = styled.div`
-  height: 100px;
-`;
 
 const Wrapper = styled.div`
   display: flex;

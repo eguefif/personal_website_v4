@@ -20,8 +20,11 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 64px;
+
   @media ${QUERIES.laptopAndUp} {
-    margin: 128px;
+    margin-left: 128px;
+    margin-right: 128px;
+    margin-top: 64px;
     flex-direction: row;
     align-items: start;
     gap: 264px;

@@ -24,6 +24,8 @@ const GlobalStyles = createGlobalStyle`
       --color-gray-900: hsl(250 0 9);
       --color-gray-950: hsl(250 0 4);
 
+      --color-background: hsl(220deg, 28%, 5%);
+
       /* Transparent variants */
       --color-gray-50-alpha-10: hsl(250 0 98 / 0.1);
       --color-gray-50-alpha-20: hsl(250 0 98 / 0.2);

@@ -16,7 +16,6 @@ export default function SideBar() {
 }
 
 const SideBarWrapper = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,6 +23,7 @@ const SideBarWrapper = styled.div`
   gap: 32px;
 
   @media ${QUERIES.laptopAndUp} {
+    flex: 1;
     position: sticky;
     top: 0;
     display: flex;
