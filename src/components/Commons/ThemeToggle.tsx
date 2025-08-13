@@ -59,15 +59,25 @@ const ToggleButton = styled.button`
   align-items: center;
   justify-content: center;
   
-  transition: all 0.3s ease;
-  
-  &:hover {
-    background: var(--color-gray-700);
-    border-color: var(--color-gray-500);
-    transform: scale(1.05);
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--color-gray-700);
+      border-color: var(--color-gray-500);
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
   }
   
-  &:active {
-    transform: scale(0.95);
+  /* Fallback styles for reduced motion users */
+  @media (prefers-reduced-motion: reduce) {
+    &:hover {
+      background: var(--color-gray-700);
+      border-color: var(--color-gray-500);
+    }
   }
 `;

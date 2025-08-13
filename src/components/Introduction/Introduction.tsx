@@ -17,16 +17,18 @@ const Wrapper = styled.div`
 `;
 
 const AnimatedPersonalInfo = styled(PersonalInfo)`
-  animation: fadeInUp 1s ease-out;
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadeInUp 1s ease-out;
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 `;

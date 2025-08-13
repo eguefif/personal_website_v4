@@ -6,12 +6,28 @@ import MainLayout from 'components/MainLayout';
 import Introduction from 'components/Introduction/Introduction';
 
 function App() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   return (
     <Wrapper>
-        <IntroductionContainer>
-          <Introduction />
-        </IntroductionContainer>
-        <MainLayoutContainer>
+        {!prefersReducedMotion && (
+          <IntroductionContainer>
+            <Introduction />
+          </IntroductionContainer>
+        )}
+        <MainLayoutContainer $skipIntro={prefersReducedMotion}>
           <MainLayout />
         </MainLayoutContainer>
       <GlobalStyles />
@@ -51,7 +67,10 @@ const IntroductionContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  animation: ${IntroAnimation} 4500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: ${IntroAnimation} 4500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
 `;
 
 const MainLayoutAnimation = keyframes`
@@ -64,7 +83,7 @@ const MainLayoutAnimation = keyframes`
   }
 `;
 
-const MainLayoutContainer = styled.div`
+const MainLayoutContainer = styled.div<{ $skipIntro: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
@@ -73,8 +92,15 @@ const MainLayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 84px;
-  animation: ${MainLayoutAnimation} 1000ms both;
-  animation-delay: 4000ms;/*4000ms*/;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: ${MainLayoutAnimation} 1000ms both;
+    animation-delay: ${props => props.$skipIntro ? '0ms' : '4000ms'};
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+  }
 `;
 
 export default App

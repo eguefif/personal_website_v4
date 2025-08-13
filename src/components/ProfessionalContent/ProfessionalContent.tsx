@@ -56,6 +56,9 @@ const ContentWrapper = styled.div<{ $isVisible: boolean }>`
   flex-direction: column;
   gap: 104px;
   opacity: ${props => props.$isVisible ? 1 : 0};
-  transition: opacity 0.2s ease-in-out;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.2s ease-in-out;
+  }
 `;
 
