@@ -1,8 +1,9 @@
 import { useParams, Navigate, Link } from 'react-router';
 import { styled } from 'styled-components';
 import { ArrowLeft } from 'react-feather';
-import { H1, H2 } from 'components/Commons/Titles';
+import { H1 } from 'components/Commons/Titles';
 import { TechList, TechEntry } from 'components/Commons/TechTags';
+import ProjectDescription, { ImagePosition } from 'components/Commons/ProjectDescription';
 import { QUERIES } from 'components/constants';
 import PROJECTS from './PortFolioData';
 import type { Project } from './PortFolioData';
@@ -34,27 +35,33 @@ export default function ProjectDetail() {
         </TechWrapper>
       </Header>
       
-      <ProjectImage src={project.image.src} alt={project.image.alt} />
+      <ProjectDescription
+        title="Introduction"
+        description={project.description.introduction.text}
+        image={project.description.introduction.image}
+        imagePosition={ImagePosition.Left}
+      />
       
-      <DescriptionSection>
-        <SectionTitle>Introduction</SectionTitle>
-        <SectionContent>{project.description.introduction}</SectionContent>
-      </DescriptionSection>
+      <ProjectDescription
+        title="Purpose and Goal"
+        description={project.description.purpose.text}
+        image={project.description.purpose.image}
+        imagePosition={ImagePosition.Right}
+      />
       
-      <DescriptionSection>
-        <SectionTitle>Purpose and Goal</SectionTitle>
-        <SectionContent>{project.description.purpose}</SectionContent>
-      </DescriptionSection>
+      <ProjectDescription
+        title="Spotlight"
+        description={project.description.spotlight.text}
+        image={project.description.spotlight.image}
+        imagePosition={ImagePosition.Left}
+      />
       
-      <DescriptionSection>
-        <SectionTitle>Spotlight</SectionTitle>
-        <SectionContent>{project.description.spotlight}</SectionContent>
-      </DescriptionSection>
-      
-      <DescriptionSection>
-        <SectionTitle>Lessons Learned</SectionTitle>
-        <SectionContent>{project.description.lessons}</SectionContent>
-      </DescriptionSection>
+      <ProjectDescription
+        title="Lessons Learned"
+        description={project.description.lessons.text}
+        image={project.description.lessons.image}
+        imagePosition={ImagePosition.Right}
+      />
     </Wrapper>
   );
 }
@@ -91,19 +98,6 @@ const ProjectImage = styled.img`
   display: block;
 `;
 
-const DescriptionSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
-
-const SectionTitle = styled(H2)``;
-
-const SectionContent = styled.div`
-  font-size: 1.1rem;
-  line-height: 1.6;
-  white-space: pre-wrap;
-`;
 
 const BackLink = styled(Link)`
   color: var(--color-white);
