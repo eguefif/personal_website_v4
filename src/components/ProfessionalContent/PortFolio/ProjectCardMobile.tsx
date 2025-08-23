@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-import type { Project } from './FakeData';
+import type { Project } from './PortFolioData';
 import { H2 } from 'components/Commons/Titles';
 import { QUERIES } from 'components/constants';
 import { TechList, TechEntry } from 'components/Commons/TechTags';
@@ -22,7 +22,7 @@ export default function ProjectCardMobile({project} : { project: Project }) {
           <ProjectImage src={project.image.src} alt={project.image.alt} />
         </ImageWrapper>
           <ProjectDescription>
-            {project.description}
+            {project.summary}
           </ProjectDescription>
         </ProjectContent>
       </TopWrapper>

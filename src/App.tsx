@@ -1,7 +1,6 @@
 import { keyframes, styled } from 'styled-components';
 import { useState, useEffect } from 'react';
 
-import GlobalStyles from 'components/GlobalStyles/GlobalStyles';
 import MainLayout from 'components/MainLayout';
 import Introduction from 'components/Introduction/Introduction';
 
@@ -30,7 +29,6 @@ function App() {
         <MainLayoutContainer $skipIntro={prefersReducedMotion}>
           <MainLayout />
         </MainLayoutContainer>
-      <GlobalStyles />
     </Wrapper>
   )
 }
