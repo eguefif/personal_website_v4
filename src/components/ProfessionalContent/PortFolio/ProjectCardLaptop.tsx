@@ -22,7 +22,7 @@ export default function ProjectCardLaptop({project} : { project: Project }) {
             {project.title}
           </ProjectTitle>
           <ProjectDescription>
-            {project.description}
+            {project.summary}
           </ProjectDescription>
         </ProjectContent>
       </TopWrapper>
